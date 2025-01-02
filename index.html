@@ -10,15 +10,15 @@
       background-color: white;
       color: black;
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 75vh;
+      align-items: center;
+      height: 100vh;  /* Full screen height */
     }
 
     .tracker-container {
-      width: 100%;
-      max-width: 1250px; /* Increased max-width to make the bar wider */
       text-align: center;
+      max-width: 1800px;
+      width: 100%;  /* Allow it to scale */
     }
 
     .progress-bar {
@@ -27,29 +27,18 @@
       border: 1px solid black;
       border-radius: 5px;
       overflow: hidden;
-      position: relative;
-      height: 20px; /* Increased height for a wider bar */
+      height: 20px; /* Progress bar height */
     }
 
     .progress {
       height: 100%;
       background-color: black;
-      text-align: center;
-      color: white;
-      line-height: 20px; /* Adjusted for the new height */
       transition: width 0.5s ease;
     }
 
     .percentage {
-      margin: 10px 0;
-      font-size: 0.9em; /* Reduced font size */
-    }
-
-    /* This will ensure the embedded content doesn't overflow or stretch */
-    .embed-container {
-      width: 100%; /* Fit to the container */
-      height: 300px; /* Set height of the embedded frame */
-      overflow: hidden;
+      margin-top: 8px;
+      font-size: 0.9em;
     }
   </style>
   <script>
@@ -68,13 +57,11 @@
   </script>
 </head>
 <body>
-  <div class="embed-container">
-    <div class="tracker-container">
-      <div class="progress-bar">
-        <div id="progress" class="progress"></div>
-      </div>
-      <div id="percentage" class="percentage"></div>
+  <div class="tracker-container">
+    <div class="progress-bar">
+      <div id="progress" class="progress"></div>
     </div>
+    <div id="percentage" class="percentage"></div>
   </div>
 </body>
 </html>
