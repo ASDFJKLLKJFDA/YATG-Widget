@@ -9,17 +9,6 @@
       font-family: Arial, sans-serif;
       background-color: white;
       color: black;
-      display: flex;<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: white;
-      color: black;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,66 +43,6 @@
     .percentage {
       margin: 10px 0;
       font-size: 1em; /* Reduced font size */
-    }
-  </style>
-  <script>
-    function updateProgressBar() {
-      const now = new Date();
-      const startOfYear = new Date(now.getFullYear(), 0, 1);
-      const endOfYear = new Date(now.getFullYear() + 1, 0, 1);
-      const yearProgress = ((now - startOfYear) / (endOfYear - startOfYear)) * 100;
-      const currentYear = now.getFullYear();
-
-      document.getElementById('progress').style.width = yearProgress.toFixed(2) + '%';
-      document.getElementById('percentage').textContent = yearProgress.toFixed(2) + `% of ${currentYear} Complete`;
-    }
-
-    window.onload = updateProgressBar;
-  </script>
-</head>
-<body>
-  <div class="tracker-container">
-    <div class="progress-bar">
-      <div id="progress" class="progress"></div>
-    </div>
-    <div id="percentage" class="percentage"></div>
-  </div>
-</body>
-</html>
-
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .tracker-container {
-      width: 90%;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    .progress-bar {
-      width: 100%;
-      background-color: #e0e0e0;
-      border: 1px solid black;
-      border-radius: 5px;
-      overflow: hidden;
-      position: relative;
-      height: 30px;
-    }
-
-    .progress {
-      height: 100%;
-      background-color: black;
-      text-align: center;
-      color: white;
-      line-height: 30px;
-      transition: width 0.5s ease;
-    }
-
-    .percentage {
-      margin: 10px 0;
-      font-size: 1.2em;
     }
   </style>
   <script>
